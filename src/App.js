@@ -71,7 +71,6 @@ function App() {
     localStorage.removeItem("token");
   }
 
-  /** TODO: Work on this */
   async function handleProfileEdit(username, formData) {
     console.log(formData, "THE FORM DATA");
     console.log(username, "USERNAME IN APP.JS PROFILEEDIT")

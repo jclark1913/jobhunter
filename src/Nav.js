@@ -25,7 +25,7 @@ function Nav({ logOut }) {
     <nav className="Navigation navbar navbar-expand-md">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/" end>
-          Jobber the Hutt
+          JobHunter
         </NavLink>
 
         {user?.username ? (
