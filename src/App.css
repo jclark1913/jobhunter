@@ -38,6 +38,9 @@
 }
 
 body {
-  background: url("../public/JoblyBackground.png");
-
+  background: url("../public/JoblyBackground.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
