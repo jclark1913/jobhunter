@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginForm.css"
 
 /** Signup Form
  *
@@ -54,42 +55,53 @@ function LoginForm({ handleLogin }) {
   // add login function
 
   return (
-    <div className="LoginForm mb-4 d-flex pt-4">
-      <h1 className="LoginForm-Message">Login</h1>
-      <form className="LoginForm-Form" onSubmit={handleSubmit}>
-        <div className="row justify-content-center justify-content-lg-start gx-1">
-          <div className="col-8">
-            <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              name="username"
-              className="form-control form-control-lg"
-              onChange={handleChange}
-              value={formData.username}
-              aria-label="username"
-              required
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              className="form-control form-control-lg"
-              onChange={handleChange}
-              value={formData.password}
-              aria-label="password"
-              required
-            />
-            <div className="col-auto">
-              <button className="btn search-btn btn-lg btn-primary">
-                Search
-              </button>
-            </div>
+    <div className="LoginForm">
+      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <h2 className="LoginForm-Message">Login</h2>
+
+        <div className="card">
+          <div className="card-body">
+
+            <form className="LoginForm-Form" onSubmit={handleSubmit}>
+
+                <div className="col-8">
+                  <label htmlFor="username">Username</label>
+                  <input
+                    id="username"
+                    name="username"
+                    className="form-control form-control-lg"
+                    onChange={handleChange}
+                    value={formData.username}
+                    aria-label="username"
+                    required
+                  />
+                </div>
+                <div className="col-8">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    className="form-control form-control-lg"
+                    onChange={handleChange}
+                    value={formData.password}
+                    aria-label="password"
+                    required
+                  />
+                </div>
+                <div className="col-auto">
+                  <button className="btn  btn-lg btn-primary">
+                    Login
+                  </button>
+                </div>
+
+
+            </form>
           </div>
         </div>
-      </form>
+      </div>
       {apiError.isError && <p>{apiError.errorMessage}</p>}
-    </div>
+    </div >
   );
 }
 
