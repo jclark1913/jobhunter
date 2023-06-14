@@ -1,0 +1,12 @@
+.LoginForm-Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+h2 {
+    color: white;
+    margin: 10px;
+}
