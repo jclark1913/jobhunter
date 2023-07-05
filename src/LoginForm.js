@@ -58,6 +58,10 @@ function LoginForm({ handleLogin }) {
     <div className="LoginForm">
       <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
         <h2 className="LoginForm-Message">Login</h2>
+        {/* NOTE: This line shows a hint to the user during development with login credentials */}
+        <div className="Login-Hint">
+          <h4 className="Login-Hint-Title">Use 'guest' and 'password' to log in.</h4>
+        </div>
 
         <div className="card">
           <div className="card-body">
