@@ -66,7 +66,6 @@ uses PostgreSQL for relational tables using data generated with Faker.js.
 
 ![React][React]
 ![React Router][React Router]
-![Bootstrap.com][Bootstrap.com]
 ![PostgreSQL][PostgreSQL]
 ![ElephantSQL][ElephantSQL]
 ![Render][Render]
