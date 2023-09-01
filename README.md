@@ -7,11 +7,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][https://github.com/jclark1913/jobly-frontend/contributors]
-[![Forks][forks-shield]][https://github.com/jclark1913/jobly-frontend/forks]
-[![Stargazers][stars-shield]][https://github.com/jclark1913/jobly-frontend/stargazers]
-[![Issues][issues-shield]][https://github.com/jclark1913/jobly-frontend/issues]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/justin-w-clark/]
 
 <div align="center"><img src="./docs/main.png"></div>
 
@@ -19,7 +14,7 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/jclark1913/jobly_frontend"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jclark1913/jobly_frontend"><strong>View documentation »</strong></a>
     <br />
     <br />
     <a href="jobhunter.justinclark.bio">View Demo</a>
@@ -30,6 +25,17 @@
   </p>
 </div>
 
+<div align="center">
+
+![Top Languages](https://img.shields.io/github/languages/top/jclark1913/jobly_frontend)
+![GitHub repo size](https://img.shields.io/github/repo-size/jclark1913/jobly_frontend)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jclark1913/jobly_frontend)
+![GitHub contributors](https://img.shields.io/github/contributors/jclark1913/jobly_frontend)
+![GitHub last commit](https://img.shields.io/github/last-commit/jclark1913/jobly_frontend)
+![GitHub issues](https://img.shields.io/github/issues/jclark1913/jobly_frontend)
+![GitHub](https://img.shields.io/github/license/jclark1913/jobly_frontend)
+
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -44,14 +50,7 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -144,7 +143,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@@JustinClarkJO](https://twitter.com/@JustinClarkJO) - email@email_client.com
+Justin Clark - [@JustinClarkJO](https://twitter.com/@JustinClarkJO) - jclarksummit@gmail.com
 
 Project Link: [https://github.com/jclark1913/jobly_frontend](https://github.com/jclark1913/jobly_frontend)
 
