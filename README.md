@@ -25,19 +25,6 @@
   </p>
 </div>
 
-<div align="center">
-
-![Top Languages](https://img.shields.io/github/languages/top/jclark1913/jobly_frontend)
-![GitHub repo size](https://img.shields.io/github/repo-size/jclark1913/jobly_frontend)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jclark1913/jobly_frontend)
-![GitHub contributors](https://img.shields.io/github/contributors/jclark1913/jobly_frontend)
-![GitHub last commit](https://img.shields.io/github/last-commit/jclark1913/jobly_frontend)
-![GitHub issues](https://img.shields.io/github/issues/jclark1913/jobly_frontend)
-![GitHub](https://img.shields.io/github/license/jclark1913/jobly_frontend)
-
-</div>
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -75,14 +62,18 @@ uses PostgreSQL for relational tables using data generated with Faker.js.
 
 ### Built With
 
-* ![React][React]
-* ![React Router][React Router]
-* ![Bootstrap.com][Bootstrap.com]
-* ![PostgreSQL][PostgreSQL]
-* ![ElephantSQL][ElephantSQL]
-* ![Render][Render]
-* ![Node.js][Node.js]
-* ![Express][Express]
+<div align="center">
+
+![React][React]
+![React Router][React Router]
+![Bootstrap.com][Bootstrap.com]
+![PostgreSQL][PostgreSQL]
+![ElephantSQL][ElephantSQL]
+![Render][Render]
+![Node.js][Node.js]
+![Express][Express]
+
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
