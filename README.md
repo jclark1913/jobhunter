@@ -1,70 +1,193 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][https://github.com/jclark1913/jobly-frontend/contributors]
+[![Forks][forks-shield]][https://github.com/jclark1913/jobly-frontend/forks]
+[![Stargazers][stars-shield]][https://github.com/jclark1913/jobly-frontend/stargazers]
+[![Issues][issues-shield]][https://github.com/jclark1913/jobly-frontend/issues]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/justin-w-clark/]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center"><img src="./docs/main.png"></div>
 
-## Available Scripts
+<h3 align="center">Jobhunter</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    <br />
+    <a href="https://github.com/jclark1913/jobly_frontend"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="jobhunter.justinclark.bio">View Demo</a>
+    ·
+    <a href="https://github.com/jclark1913/jobly_frontend/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jclark1913/jobly_frontend/issues">Request Feature</a>
+  </p>
+</div>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Jobhunter is a lightweight single-page application that allows users to create an account, search jobs and track
+companies. I initially started this project in spring 2023 as part of <a href="rithmschool.com">Rithm School's</a> curriculum, with a handful of
+small changes since then. Although there are more features I'd be interested in incorporating and areas I'd like to refactor, I've mostly transitioned to creating <a href="https://github.com/jclark1913/syria-daily-brief">other projects</a>.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend is built in React, with a <a href="https://github.com/jclark1913/express-jobly">backend</a> written in Express/Node.js. The database
+uses PostgreSQL for relational tables using data generated with Faker.js.
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* ![React][React]
+* ![React Router][React Router]
+* ![Bootstrap.com][Bootstrap.com]
+* ![PostgreSQL][PostgreSQL]
+* ![ElephantSQL][ElephantSQL]
+* ![Render][Render]
+* ![Node.js][Node.js]
+* ![Express][Express]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<!-- GETTING STARTED -->
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To see the project in action, visit the <a href="jobhunter.justinclark.bio">demo</a>.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Otherwise, to build Jobhunter from source:
 
-### Code Splitting
+1. Clone backend and frontend repos onto your machine:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/jclark1913/jobly_frontend
+git clone https://github.com/jclark1913/jobly_backend
+```
 
-### Analyzing the Bundle Size
+2. Create and seed the database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+createdb jobly
+cd jobly-backend
+psql jobly.sql
+```
 
-### Making a Progressive Web App
+3. Install dependencies and run the backend server (defaults to port `3001`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd jobly-backend
+npm install
+npm run start
+```
 
-### Advanced Configuration
+4. Install dependencies and run the frontend server (defaults to port `3000`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+cd jobly-frontend
+npm install
+npm run start
+```
 
-### Deployment
+4. Visit `localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@@JustinClarkJO](https://twitter.com/@JustinClarkJO) - email@email_client.com
+
+Project Link: [https://github.com/jclark1913/jobly_frontend](https://github.com/jclark1913/jobly_frontend)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+I completed this project during my time at [Rithm School](https://rithmschool.com). A big thanks to all the instructors
+and classmates who encouraged and supported me during that time.
+
+* [Rithm School](https://rithmschool.com)
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jclark1913/jobly_frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/jclark1913/jobly_frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jclark1913/jobly_frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/jclark1913/jobly_frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/jclark1913/jobly_frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/jclark1913/jobly_frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jclark1913/jobly_frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/jclark1913/jobly_frontend/issues
+[license-shield]: https://img.shields.io/github/license/jclark1913/jobly_frontend.svg?style=for-the-badge
+[license-url]: https://github.com/jclark1913/jobly_frontend/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: docs/jobs.png
+[React]: https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white
+[ElephantSQL]: https://img.shields.io/badge/ElephantSQL-2D9CDB?logo=elephantsql&logoColor=white
+[Render]: https://img.shields.io/badge/Render-000000?logo=render&logoColor=white
+[Express]: https://img.shields.io/badge/Express-000000?logo=express&logoColor=white
+[Node.js]: https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white
+[React Router]: https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white
