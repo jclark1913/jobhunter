@@ -23,7 +23,7 @@ function ProfileForm({ handleProfileEdit }) {
     email: user.email,
   });
 
-  console.log(user, "USER IN PROFILEFORM")
+  console.log(user, "USER IN PROFILEFORM");
 
   /** Handles keystrokes in searchbar and updates formData */
   function handleChange(evt) {
@@ -45,11 +45,11 @@ function ProfileForm({ handleProfileEdit }) {
   }
 
   return (
-    <div className="ProfileForm mb-4 d-flex pt-4">
-      <h1 className="ProfileForm-Message">Update Profile</h1>
-      <form className="ProfileForm-Form" onSubmit={handleSubmit}>
-        <div className="row justify-content-center justify-content-lg-start gx-1">
-          <div className="col-8">
+    <div className="ProfileForm d-flex flex-column align-items-center mb-4 pt-4">
+      <h1 className="ProfileForm-Message text-center mb-4">Update Profile</h1>
+      <form className="ProfileForm-Form d-flex flex-column align-items-center" onSubmit={handleSubmit}>
+        <div className="d-flex flex-column align-items-center">
+          <div className="col-12">
             <label htmlFor="username">Username</label>
             <input
               id="username"
@@ -91,7 +91,7 @@ function ProfileForm({ handleProfileEdit }) {
               required
             />
             <div className="col-auto">
-              <button className="btn search-btn btn-lg btn-primary">
+              <button className="btn search-btn btn-lg btn-primary mt-4">
                 Submit
               </button>
             </div>
