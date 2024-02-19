@@ -37,12 +37,69 @@ export class JobHunterAPI {
     }
   }
 
-
   // Individual API routes
 
   // Auth
 
   /** POST register new user function */
+  static async registerUser(inputData: RequestData) {
+    const { username, password, firstName, lastName, email } = inputData;
+
+    let res = await this.request(
+      "auth/register",
+      { username, password, firstName, lastName, email },
+      "post"
+    );
+
+    this.token = res.token;
+    return this.token;
+  }
+
+  /** POST Log in user */
+
+  static async loginUser(inputData: RequestData) {
+    const { username, password } = inputData;
+    let res = await this.request("auth/token", { username, password }, "post");
+    this.token = res.token;
+    return this.token;
+  }
+
+  // Users
+
+  /** GET user by username */
+
+  static async getUser(username: string) {
+    let res = await this.request(`users/${username}`);
+    return res.user;
+  }
+
+  /** PATCH edit user */
+  static async editUser(username: string, updateData: RequestData) {
+    let res = await this.request(`users/${username}`, updateData, "patch");
+    return res.user;
+  }
+
+  // Companies
+
+  /** GET company details by handle */
+  static async getCompany(handle: string) {
+    let res = await this.request(`companies/${handle}`);
+    return res.company;
+  }
+
+  /** GET details from all companies */
+  static async getCompanies() {
+    let res = await this.request("companies");
+    return res.companies;
+  }
+
+  /** Search for companies by handle */
+  static async searchCompaniesByHandle(term: string) {
+    let res = await this.request(`companies?nameLike=${term}`);
+    return res.companies;
+  }
+
+  // JOBS
 
 
 }
