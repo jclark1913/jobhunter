@@ -87,19 +87,18 @@ export class JobHunterAPI {
     return res.company;
   }
 
-  /** GET details from all companies */
-  static async getCompanies() {
-    let res = await this.request("companies");
-    return res.companies;
-  }
-
-  /** Search for companies by handle */
-  static async searchCompaniesByHandle(term: string) {
-    let res = await this.request(`companies?nameLike=${term}`);
+  /** GET all companies or get companies by search term */
+  static async getCompanies(nameLike: string) {
+    let res = await this.request("companies", { nameLike });
     return res.companies;
   }
 
   // JOBS
 
+  /** GET all jobs (optional filter by title)  */
+  static async getJobs(title: string) {
+    let res = await this.request("jobs", { title });
+    return res.jobs;
+  }
 
 }
