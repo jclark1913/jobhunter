@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../auth/UserContext";
+import { NavLink } from "react-router-dom";
 
 interface NavBarProps {
   logout: () => void;
@@ -21,8 +22,8 @@ const NavBar: React.FC<NavBarProps> = ({ logout }) => {
   const loggedOutNavBar = () => {
     return (
       <nav>
-        <button>Login</button>
-        <button>Sign Up</button>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/signup">Sign Up</NavLink>
       </nav>
     );
   };
