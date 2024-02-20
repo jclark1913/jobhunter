@@ -1,7 +1,18 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { LoginData, SignUpData } from "../../App";
+import { Navigate } from "react-router-dom";
+import Homepage from "../Homepage";
+import LoginForm from "../../auth/LoginForm";
+import SignupForm from "../../auth/SignupForm";
 
-const RoutesList: React.FC<RoutesListPropx> = ({
+interface RoutesListProps {
+  login: (loginData: LoginData) => Promise<void>;
+  signup: (signupData: SignUpData) => Promise<void>;
+  currentUser: any;
+}
+
+const RoutesList: React.FC<RoutesListProps> = ({
   login,
   signup,
   currentUser,
@@ -9,11 +20,11 @@ const RoutesList: React.FC<RoutesListPropx> = ({
   return (
     <div>
       <Routes>
-        <Route path="/" />
-        {currentUser ? (
+        <Route path="/" element={<Homepage />}/>
+        {!currentUser ? (
           <>
-            <Route path="/login" />
-            <Route path="/signup" />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/signup" element={<SignupForm />} />
           </>
         ) : (
           <>
@@ -23,7 +34,10 @@ const RoutesList: React.FC<RoutesListPropx> = ({
             <Route path="/profile" />
           </>
         )}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   );
 };
+
+export default RoutesList;
