@@ -4,11 +4,36 @@ import NavBar from "./components/NavBar";
 import useLocalStorage from "./hooks/useLocalStorage";
 import { JobHunterAPI } from "./api/api";
 import UserContext from "./auth/UserContext";
+import RoutesList from "./components/routes/RoutesList";
+
+export const TOKEN_STORAGE_KEY = "token";
+
+export interface DecodedToken {
+  [key: string]: any;
+}
+
+export interface LoginData {
+  username: string;
+  password: string;
+}
+
+export interface CurrentUser {
+  data: any;
+  infoLoaded: boolean;
+}
+
+export interface SignUpData {
+  username: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+}
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
     data: null,
-    infoLoaded: false,
+    infoLoaded: true,
   });
   const [token, setToken] = useLocalStorage(TOKEN_STORAGE_KEY);
 
@@ -75,6 +100,11 @@ function App() {
     >
       <div>
         <NavBar logout={logout} />
+        <RoutesList
+          login={login}
+          signup={signup}
+          currentUser={currentUser.data}
+        />
       </div>
     </UserContext.Provider>
   );
