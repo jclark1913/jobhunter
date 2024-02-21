@@ -5,6 +5,7 @@ import useLocalStorage from "./hooks/useLocalStorage";
 import { JobHunterAPI } from "./api/api";
 import UserContext from "./auth/UserContext";
 import RoutesList from "./components/routes/RoutesList";
+import Footer from "./Footer";
 
 export const TOKEN_STORAGE_KEY = "token";
 
@@ -98,14 +99,17 @@ function App() {
         setCurrentUser,
       }}
     >
-      <div>
+      <main className="bg-[#23272F] min-h-screen flex flex-col">
         <NavBar logout={logout} />
-        <RoutesList
-          login={login}
-          signup={signup}
-          currentUser={currentUser.data}
-        />
-      </div>
+        <div className="container mx-auto px-12 p-4 flex flex-col justify-center flex-grow">
+          <RoutesList
+            login={login}
+            signup={signup}
+            currentUser={currentUser.data}
+          />
+        </div>
+        <Footer />
+      </main>
     </UserContext.Provider>
   );
 }
