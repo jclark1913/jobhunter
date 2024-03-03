@@ -6,6 +6,7 @@ import { JobHunterAPI } from "./api/api";
 import UserContext from "./auth/UserContext";
 import RoutesList from "./components/routes/RoutesList";
 import Footer from "./Footer";
+import { ThemeContext, ThemeProvider } from "./ThemeContext";
 
 export const TOKEN_STORAGE_KEY = "token";
 
@@ -93,13 +94,14 @@ function App() {
   if (!currentUser.infoLoaded) return <div>Loading...</div>;
 
   return (
+    <ThemeProvider>
     <UserContext.Provider
       value={{
         currentUser: currentUser.data,
         setCurrentUser,
       }}
     >
-      <main className="bg-[#23272F] min-h-screen flex flex-col">
+      <main className="bg-sitebackground min-h-screen flex flex-col">
         <NavBar logout={logout} />
         <div className="container mx-auto px-12 p-4 flex flex-col justify-center flex-grow">
           <RoutesList
@@ -111,6 +113,7 @@ function App() {
         <Footer />
       </main>
     </UserContext.Provider>
+    </ThemeProvider>
   );
 }
 
