@@ -5,10 +5,10 @@ import { VscAccount } from "react-icons/vsc";
 import { RiLockPasswordLine } from "react-icons/ri";
 
 export interface LoginFormProps {
-  login: (username: string, password: string) => void;
+  login: (formData: { username: string; password: string }) => void;
 }
 
-const LoginForm = ({ login }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ login }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
@@ -16,7 +16,7 @@ const LoginForm = ({ login }) => {
   });
   const [formErrors, setFormErrors] = useState<any>([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
       await login(formData);
@@ -26,7 +26,7 @@ const LoginForm = ({ login }) => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((data) => ({
       ...data,
@@ -38,7 +38,7 @@ const LoginForm = ({ login }) => {
     <div className="flex flex-col align-middle justify-center items-center text-xl">
       <TypeAnimation
         className="text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] text-4xl font-extrabold mb-10"
-        sequence={["Let's get started!", 3000]}
+        sequence={["Welcome back!", 3000]}
         cursor={true}
       />
       <div className="flex flex-col text-left justify-center align-middle items-center rounded-md border border-normalborder w-1/2 gap-3 bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
