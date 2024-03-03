@@ -9,10 +9,17 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --site-background: 4, 10, 36, 255;
+  --primary-text: 255, 255, 255, 255;
+  --gradient-start: 17,53,135,255;
+  --normal-border: 107, 114, 128, 255;
 }
