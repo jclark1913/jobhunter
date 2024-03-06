@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../auth/UserContext";
+import UserContext from "./auth/UserContext";
 import { NavLink } from "react-router-dom";
 
 // flex flex-row justify-between
@@ -15,8 +15,10 @@ const NavBar: React.FC<NavBarProps> = ({ logout }) => {
   const loggedInNavBar = () => {
     return (
       <nav className="flex flex-row gap-4">
-        <p>Welcome, {currentUser.data}</p>
-        <button onClick={logout}>Logout</button>
+        <NavLink to="/companies">Companies</NavLink>
+        <p>Jobs</p>
+        <p>Edit Profile</p>
+        <button onClick={logout}>Logout {currentUser.firstName || currentUser.username}</button>
       </nav>
     );
   };
