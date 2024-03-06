@@ -91,7 +91,7 @@ export class JobHunterAPI {
   }
 
   /** GET all companies or get companies by search term */
-  static async getCompanies(nameLike: string) {
+  static async getCompanies(nameLike: string | undefined) {
     let res = await this.request("companies", { nameLike });
     return res.companies;
   }
