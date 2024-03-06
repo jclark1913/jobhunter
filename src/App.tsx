@@ -3,7 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import NavBar from "./components/NavBar";
 import useLocalStorage from "./hooks/useLocalStorage";
 import { JobHunterAPI } from "./api/api";
-import UserContext from "./auth/UserContext";
+import UserContext from "./components/auth/UserContext";
 import RoutesList from "./components/routes/RoutesList";
 import Footer from "./Footer";
 import { ThemeContext, ThemeProvider } from "./ThemeContext";
