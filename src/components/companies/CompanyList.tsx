@@ -8,6 +8,7 @@ const CompanyList: React.FC = () => {
 
   useEffect(function getCompaniesOnMount() {
     search();
+    console.log("companies", companies)
   }, []);
 
   const search = async (name?: string) => {
@@ -19,8 +20,8 @@ const CompanyList: React.FC = () => {
 
   return (
     <div>
-      <h1>Companies</h1>
-      <div className="flex flex-col align-middle items-left">
+      <h1 className="text-center font-extrabold text-2xl mb-5">Companies</h1>
+      <div className="flex flex-col align-middle items-center gap-4">
         {/* <SearchForm searchFor={search} /> */}
         {companies.map((c) => (
           <CompanyCard
