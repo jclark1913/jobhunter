@@ -74,7 +74,7 @@ function App() {
   /** Handles log out */
   const logout = () => {
     setCurrentUser({
-      infoLoaded: false,
+      infoLoaded: true,
       data: null,
     });
     setToken(null);
