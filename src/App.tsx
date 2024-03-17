@@ -7,6 +7,7 @@ import UserContext from "./components/auth/UserContext";
 import RoutesList from "./components/routes/RoutesList";
 import Footer from "./Footer";
 import { ThemeContext, ThemeProvider } from "./ThemeContext";
+import LoadingModal from "./components/LoadingModal";
 
 export const TOKEN_STORAGE_KEY = "token";
 
@@ -82,6 +83,10 @@ function App() {
 
   /** Handles log in */
   const login = async (loginData: LoginData) => {
+    setCurrentUser({
+      infoLoaded: false,
+      data: null,
+    })
     let token = await JobHunterAPI.loginUser(loginData);
     setToken(token);
   };
@@ -91,7 +96,7 @@ function App() {
     setToken(token);
   };
 
-  if (!currentUser.infoLoaded) return <div>Loading...</div>;
+  // if (!currentUser.infoLoaded) return <div>Loading...</div>;
 
   return (
     <ThemeProvider>
@@ -101,6 +106,7 @@ function App() {
         setCurrentUser,
       }}
     >
+      {!currentUser.infoLoaded ? <LoadingModal /> : null}
       <main className="bg-sitebackground min-h-screen flex flex-col">
         <NavBar logout={logout} />
         <div className="container mx-auto px-12 p-4 flex flex-col justify-center flex-grow">
