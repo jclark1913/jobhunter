@@ -27,10 +27,10 @@ const CompanyList: React.FC = () => {
       <h1 className="text-center font-extrabold text-2xl mb-5 text-primarytext">
         Companies
       </h1>
-      {companies.length === null ? <LoadingModal /> : null}
+      {companies === null ? <LoadingModal /> : null}
       <div className="flex flex-col align-middle items-center gap-4">
         <SearchForm searchFor={search} />
-        {companies.map((c:any) => (
+        {companies && companies.map((c:any) => (
           <CompanyCard
             key={c.handle}
             name={c.name}
@@ -39,7 +39,7 @@ const CompanyList: React.FC = () => {
             handle={c.handle}
           />
         ))}
-        {companies.length === 0 ? <p>No results found</p> : null}
+        {companies !== null && companies.length === 0 ? <p>No results found</p> : null}
       </div>
     </div>
   );
