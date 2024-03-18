@@ -36,11 +36,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ login }) => {
 
   return (
     <div className="flex flex-col align-middle justify-center items-center text-xl">
-      <TypeAnimation
+      {/* <TypeAnimation
         className="text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] text-4xl font-extrabold mb-10"
         sequence={["Welcome back!", 3000]}
         cursor={true}
-      />
+      /> */}
+      <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] text-4xl font-extrabold mb-10">
+        Welcome back!
+      </h1>
       <div className="flex flex-col text-left justify-center align-middle items-center rounded-md border border-normalborder w-1/2 gap-3 bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
         <h1 className="text-3xl font-extrabold pt-5">Log In</h1>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
