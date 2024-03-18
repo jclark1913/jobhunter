@@ -44,21 +44,21 @@ const Homepage = () => {
         <div className="flex flex-row gap-4 items-stretch justify-items-stretch justify-between mt-4">
           <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
             Browse{" "}
-            <p className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
               companies
-            </p>
+            </span>
           </p>
           <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
             Find{" "}
-            <p className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
               jobs
-            </p>
+            </span>
           </p>
           <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-lg">
             Jumpstart your{" "}
-            <p className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
               career
-            </p>
+            </span>
           </p>
         </div>
         <small className="text-center mt-4">
