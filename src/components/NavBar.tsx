@@ -19,8 +19,7 @@ const NavBar: React.FC<NavBarProps> = ({ logout }) => {
     return (
       <nav className="flex flex-row gap-4">
         <NavLink to="/companies">Companies</NavLink>
-        <p>Jobs</p>
-        <p>Edit Profile</p>
+        <NavLink to="/profile">Edit Profile</NavLink>
         <Link onClick={logout} to="/">
           Logout {currentUser.firstName || currentUser.username}
         </Link>
