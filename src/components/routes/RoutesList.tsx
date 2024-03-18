@@ -6,6 +6,7 @@ import Homepage from "../Homepage";
 import LoginForm from "../auth/LoginForm";
 import SignupForm from "../auth/SignupForm";
 import CompanyList from "../companies/CompanyList";
+import CompanyDetail from "../companies/CompanyDetail";
 
 interface RoutesListProps {
   login: (loginData: LoginData) => Promise<void>;
@@ -30,7 +31,7 @@ const RoutesList: React.FC<RoutesListProps> = ({
         ) : (
           <>
             <Route path="/companies" element={<CompanyList />} />
-            <Route path="/companies/:handle" />
+            <Route path="/companies/:handle" element={<CompanyDetail />} />
             <Route path="/jobs" />
             <Route path="/profile" />
           </>
