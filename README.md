@@ -57,8 +57,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Jobhunter is a lightweight single-page application that allows users to create an account, search jobs and track
 companies. I initially started this project in spring 2023 as part of <a href="https://rithmschool.com">Rithm School's</a> curriculum, but I redid the website recently using Vite and Vercel.
 
