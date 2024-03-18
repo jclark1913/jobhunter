@@ -29,7 +29,7 @@ const Homepage = () => {
     <div className="text-primarytext flex justify-center flex-row align-middle w-full flex-grow">
       <img
         className="h-[400px] hidden sm:block"
-        src={theme === "dark" ? "src/assets/man-reading.svg" : "src/assets/man-reading-light.svg"}
+        src={theme === "dark" ? "/man-reading.svg" : "/man-reading-light.svg"}
       />
       <div className="flex flex-col">
         <h1 className="font-6xl font-bold">JobHunter</h1>
