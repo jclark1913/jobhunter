@@ -8,7 +8,7 @@ import JobList from "../jobs/JobList";
 const CompanyDetail: React.FC = () => {
   const { handle } = useParams<{ handle?: string }>();
   const [company, setCompany] = useState<any>(null);
-  const [errors, setErrors] = useState<any>([]);
+  // const [errors, setErrors] = useState<any>([]);
 
   useEffect(
     function getCompanyAndJobsOnMount() {
@@ -19,7 +19,7 @@ const CompanyDetail: React.FC = () => {
             setCompany(company);
           }
         } catch (errors) {
-          setErrors(errors);
+          // setErrors(errors);
         }
       }
       getCompany();

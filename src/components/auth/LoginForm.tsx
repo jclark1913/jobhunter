@@ -13,7 +13,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ login }) => {
     username: "",
     password: "",
   });
-  const [formErrors, setFormErrors] = useState<any>([]);
+  // const [formErrors, setFormErrors] = useState<any>([]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ login }) => {
       await login(formData);
       navigate("/companies");
     } catch (err) {
-      setFormErrors(err);
+      // setFormErrors(err);
     }
   };
 

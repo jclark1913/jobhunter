@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import NavBar from "./components/NavBar";
 import useLocalStorage from "./hooks/useLocalStorage";
@@ -6,7 +6,7 @@ import { JobHunterAPI } from "./api/api";
 import UserContext from "./components/auth/UserContext";
 import RoutesList from "./components/routes/RoutesList";
 import Footer from "./Footer";
-import { ThemeContext, ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "./ThemeContext";
 import LoadingModal from "./components/LoadingModal";
 
 export const TOKEN_STORAGE_KEY = "token";

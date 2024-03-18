@@ -15,7 +15,7 @@ const ProfileForm: React.FC = () => {
     lastName: currentUser.lastName,
     email: currentUser.email,
   });
-  const [formErrors, setFormErrors] = useState<any>([]);
+  // const [formErrors, setFormErrors] = useState<any>([]);
 
   const [saveConfirmed, setSaveConfirmed] = useState(true);
 
@@ -34,12 +34,12 @@ const ProfileForm: React.FC = () => {
     try {
       updatedUser = await JobHunterAPI.editUser(username, profileData);
     } catch (errors) {
-      setFormErrors(errors);
+      // setFormErrors(errors);
       return;
     }
 
     setFormData((data) => ({ ...data }));
-    setFormErrors([]);
+    // setFormErrors([]);
     setSaveConfirmed(true);
 
     setCurrentUser((currentUser: any) => ({
@@ -54,7 +54,7 @@ const ProfileForm: React.FC = () => {
       ...data,
       [name]: value,
     }));
-    setFormErrors([]);
+    // setFormErrors([]);
   };
 
   if (!saveConfirmed) return <LoadingModal />;

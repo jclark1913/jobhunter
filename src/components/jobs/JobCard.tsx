@@ -1,8 +1,6 @@
-import exp from "constants";
 import React from "react";
 
 interface JobCardProps {
-  id: number;
   title: string;
   salary: number | null;
   equity: string | null;
@@ -10,7 +8,6 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({
-  id,
   title,
   salary,
   equity,

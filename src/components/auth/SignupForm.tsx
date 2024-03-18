@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TypeAnimation } from "react-type-animation";
 import { VscAccount } from "react-icons/vsc";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { CgDetailsLess } from "react-icons/cg";
@@ -26,7 +25,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ signup }) => {
     lastName: "",
     email: "",
   });
-  const [formErrors, setFormErrors] = useState<any>([]);
+  // const [formErrors, setFormErrors] = useState<any>([]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ signup }) => {
       await signup(formData);
       navigate("/companies");
     } catch (err) {
-      setFormErrors(err);
+      // setFormErrors(err);
     }
   };
 

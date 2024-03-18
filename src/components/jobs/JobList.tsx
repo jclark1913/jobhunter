@@ -11,7 +11,6 @@ const JobList: React.FC<JobListProps> = ({ jobs, companyHandle }) => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 place-items-center">
       {jobs.map((job) => (
         <JobCard
-          id={job.id}
           key={job.id}
           title={job.title}
           salary={job.salary}
