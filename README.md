@@ -76,6 +76,7 @@ uses PostgreSQL for relational tables using data generated with Faker.js.
 ![Render][Render]
 ![Node.js][Node.js]
 ![Express][Express]
+![TypeScript][TypeScript-url]
 
 </div>
 
@@ -185,3 +186,5 @@ and classmates who encouraged and supported me during that time.
 [Express]: https://img.shields.io/badge/Express-000000?logo=express&logoColor=white
 [Node.js]: https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white
 [React Router]: https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white
+[TypeScript]: https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/
