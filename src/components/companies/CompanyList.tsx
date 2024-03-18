@@ -39,7 +39,7 @@ const CompanyList: React.FC = () => {
             handle={c.handle}
           />
         ))}
-        {companies !== null && companies.length === 0 ? <p>No results found</p> : null}
+        {companies !== null && companies.length === 0 ? <p className="text-primarytext">No results found</p> : null}
       </div>
     </div>
   );
