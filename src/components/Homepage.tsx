@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
+import { useTheme } from "../ThemeContext";
 
 const Homepage = () => {
   const TYPE_DELAY = 2000;
@@ -23,40 +24,42 @@ const Homepage = () => {
     TYPE_DELAY,
   ];
 
+  const {theme} = useTheme();
+
   return (
     <div className="text-primarytext flex justify-center flex-row align-middle w-full flex-grow">
       <img
         className="h-[400px] hidden sm:block"
-        src="src/assets/man-reading.svg"
+        src={theme === "dark" ? "src/assets/man-reading.svg" : "src/assets/man-reading-light.svg"}
       />
       <div className="flex flex-col">
         <h1 className="font-6xl font-bold">JobHunter</h1>
-        <h1 className="text-4xl font-bold flex flex-col border p-12 rounded-lg border-normalborder w-full bg-gradient-to-b from-white/5 to-[#040a24] shadow-l text-center">
+        <h1 className="text-4xl font-bold flex flex-col border p-12 rounded-lg border-normalborder w-full bg-gradient-to-b from-white/5 to-sitebackground shadow-lg text-center">
           <p>Find your next job in</p>
           <div className="text-center">
             <TypeAnimation
-              className="text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff]"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-gradientend"
               sequence={typeSequence}
               repeat={Infinity}
             />
           </div>
         </h1>
         <div className="flex flex-row gap-4 items-stretch justify-items-stretch justify-between mt-4">
-          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
+          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-sitebackground shadow-lg">
             Browse{" "}
-            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-gradientend font-extrabold">
               companies
             </span>
           </p>
-          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-l">
+          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-sitebackground shadow-lg">
             Find{" "}
-            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-gradientend font-extrabold">
               jobs
             </span>
           </p>
-          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-[#040a24] shadow-lg">
+          <p className="text-lg border rounded-lg p-12  border-normalborder bg-gradient-to-b from-white/5 to-sitebackground shadow-lg">
             Jumpstart your{" "}
-            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-[#0a65ff] font-extrabold">
+            <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-gradientstart to-gradientend font-extrabold">
               career
             </span>
           </p>

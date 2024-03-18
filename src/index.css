@@ -20,6 +20,15 @@
 .dark {
   --site-background: 4, 10, 36, 255;
   --primary-text: 255, 255, 255, 255;
-  --gradient-start: 17,53,135,255;
+  --gradient-start: 17, 53, 135, 255;
+  --gradient-end: 66, 135, 245, 255;
+  --normal-border: 107, 114, 128, 255;
+}
+
+.light {
+  --site-background: 255, 255, 255, 255;
+  --primary-text: 0, 0, 0, 255;
+  --gradient-start: 17, 53, 135, 255;
+  --gradient-end: 66, 135, 245, 255;
   --normal-border: 107, 114, 128, 255;
 }
