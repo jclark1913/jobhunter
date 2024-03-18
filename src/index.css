@@ -23,6 +23,8 @@
   --gradient-start: 17, 53, 135, 255;
   --gradient-end: 66, 135, 245, 255;
   --normal-border: 107, 114, 128, 255;
+  --secondary-text: 255, 255, 255, 0.7;
+  --card-background: 30, 41, 59, 255;
 }
 
 .light {
@@ -31,4 +33,6 @@
   --gradient-start: 17, 53, 135, 255;
   --gradient-end: 66, 135, 245, 255;
   --normal-border: 107, 114, 128, 255;
+  --secondary-text: 0, 0, 0, 0.7;
+  --card-background: 255, 255, 255, 255;
 }

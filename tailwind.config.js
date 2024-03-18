@@ -22,6 +22,7 @@ module.exports = {
         normalborder: "rgba(var(--normal-border))",
         hoverborder: "rgba(var(--hover-border))",
         textfooter: "rgba(var(--text-footer))",
+        cardbackground:"rgba(var(--card-background))",
       }
     },
   },
