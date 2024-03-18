@@ -32,7 +32,7 @@ const CompanyDetail: React.FC = () => {
   console.log("company", company);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-primarytext">
       <h1 className="text-center font-extrabold text-2xl mb-5">
         {company.name}
       </h1>

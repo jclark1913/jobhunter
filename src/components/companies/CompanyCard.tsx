@@ -15,7 +15,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
   handle,
 }) => {
   return (
-    <Link to={`/companies/${handle}`} className="flex flex-col w-3/4 p-4 border border-normalborder rounded-md bg-slate-800">
+    <Link to={`/companies/${handle}`} className="flex flex-col w-3/4 p-4 border border-normalborder rounded-md bg-cardbackground text-primarytext">
       <div className="flex flex-col gap-4">
         <div className="flex flex-row justify-between">
           <h3 className="font-bold">{name}</h3>
