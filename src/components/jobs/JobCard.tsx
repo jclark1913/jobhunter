@@ -17,7 +17,7 @@ const JobCard: React.FC<JobCardProps> = ({
   companyHandle,
 }) => {
   return (
-    <div className="flex flex-col p-4 border border-normalborder rounded-md bg-slate-800 h-full w-full">
+    <div className="flex flex-col p-4 border border-normalborder rounded-md bg-cardbackground h-full w-full">
       <div className="flex flex-col gap-4">
         <h3 className="font-bold">{title}</h3>
         <div className="flex flex-col gap-2">
