@@ -8,6 +8,11 @@ interface CompanyCardProps {
   handle: string;
 }
 
+/**
+ * Card component for displaying company information.
+ *
+ * App -> CompanyList -> CompanyCard
+ */
 const CompanyCard: React.FC<CompanyCardProps> = ({
   name,
   description,

@@ -11,6 +11,11 @@ interface NavBarProps {
   logout: () => void;
 }
 
+/**
+ * The navigation bar for the app.
+ *
+ * App -> NavBar
+ */
 const NavBar: React.FC<NavBarProps> = ({ logout }) => {
   const { currentUser } = useContext(UserContext);
   const { theme, toggleTheme } = useTheme();

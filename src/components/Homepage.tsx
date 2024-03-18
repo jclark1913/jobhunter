@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "../ThemeContext";
 
+/**
+ * The homepage for the app - this is what a user sees at /.
+ *
+ * App -> Homepage
+ */
 const Homepage = () => {
   const TYPE_DELAY = 2000;
   const typeSequence = [

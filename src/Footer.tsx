@@ -1,3 +1,8 @@
+/**
+ * Footer that displays the current year + link to portfolio.
+ *
+ * App -> Footer
+ */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 

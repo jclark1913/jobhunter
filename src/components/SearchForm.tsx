@@ -4,6 +4,11 @@ interface SearchFormProps {
   searchFor: (searchTerm: string | undefined) => void;
 }
 
+/**
+ * A search bar for searching through companies.
+ *
+ * App -> CompanyList -> SearchForm
+ */
 const SearchForm: React.FC<SearchFormProps> = ({ searchFor }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 

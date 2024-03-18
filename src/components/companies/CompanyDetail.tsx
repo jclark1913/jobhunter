@@ -3,8 +3,12 @@ import { useParams } from "react-router-dom";
 import { JobHunterAPI } from "../../api/api";
 import LoadingModal from "../LoadingModal";
 import JobList from "../jobs/JobList";
-// import JobList from "../jobs/JobList";
 
+/**
+ * Displays details of a company, including its name, description, logo, and jobs attached to it.
+ *
+ * App -> CompanyDetail -> JobList
+ */
 const CompanyDetail: React.FC = () => {
   const { handle } = useParams<{ handle?: string }>();
   const [company, setCompany] = useState<any>(null);
