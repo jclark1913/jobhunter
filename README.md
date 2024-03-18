@@ -76,7 +76,7 @@ uses PostgreSQL for relational tables using data generated with Faker.js.
 ![Render][Render]
 ![Node.js][Node.js]
 ![Express][Express]
-![TypeScript][TypeScript-url]
+![TypeScript][TypeScript]
 
 </div>
 
